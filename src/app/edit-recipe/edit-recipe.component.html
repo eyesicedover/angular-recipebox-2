@@ -1,5 +1,6 @@
 <div *ngIf="childSelectedRecipe" class="card card-body">
-  <h4>Edit Recipe</h4>
+  <h3>Edit Recipe</h3>
+  <hr>
   <label for="name">Recipe Name</label>
   <input type="text" [(ngModel)]="childSelectedRecipe.name" required>
   <label for="instructions">Instructions</label>
@@ -13,5 +14,5 @@
   <label for="image">Image</label>
   <input type="text" [(ngModel)]="childSelectedRecipe.image" required>
   <hr>
-  <button type="submit" (click)="finishedEditing()">Done</button>
+  <button type="submit" (click)="doneEditing()">Done</button>
 </div>

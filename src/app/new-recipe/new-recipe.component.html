@@ -1,0 +1,18 @@
+<div class="card">
+  <h3>New Recipe</h3>
+  <hr>
+  <label>Recipe Name</label>
+  <input #newName>
+  <label>Instructions</label>
+  <input #newInstruct>
+  <label>Description</label>
+  <input #newDesc>
+  <label>Ingredients</label>
+  <input #newIngredients>
+  <label>Tags</label>
+  <input #newTags>
+  <label>Image</label>
+  <input #newImage>
+  <hr>
+  <button (click)="submitForm(newName.value, newInstruct.value, newDesc.value, newIngredients.value, newTags.value, newImage.value); newName.value=''; newInstruct.value=''; newDesc.value=''; newIngredients.value=''; newTags.value=''; newImage.value='';">Add</button>
+</div>

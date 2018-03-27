@@ -10,7 +10,7 @@ export class EditRecipeComponent{
   @Input() childSelectedRecipe: Recipe;
   @Output() clickedDone = new EventEmitter();
 
-  finishedEditing() {
+  doneEditing() {
     this.clickedDone.emit();
   }
 }
