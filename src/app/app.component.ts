@@ -20,7 +20,7 @@ export class AppComponent {
     this.selectedRecipe = clickedRecipe;
   }
 
-  finishEditing() {
+  finishedEditing() {
     this.selectedRecipe = null;
   }
 }
