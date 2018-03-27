@@ -4,23 +4,8 @@
     <h1>
       Welcome to {{ title }}!
     </h1>
-
   </div>
 </div>
-<div class="card">
-  <div class="card-body">
-    <h2 class="card-title">Your current recipes: </h2>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item" *ngFor="let recipe of recipes; let i = index"><b><h4 (click)="toggleShow(i)">{{recipe.name}}</h4></b><br><img src="{{recipe.image}}">
-        <div *ngIf="show === i && myVar === true">
-          <ul>
-            <li><i>Description:</i> {{recipe.description}}</li>
-            <li><i>Ingredients:</i> {{recipe.ingredients}}</li>
-            <li><i>Instructions:</i> {{recipe.instructions}}</li>
-            <li><i>Tags:</i> {{recipe.tags}}</li>
-          </ul>
-        </div>
-      </li>
-    </ul>
+  <div class="container">
+    <app-recipe-list [childRecipesList]="masterRecipesList"></app-recipe-list>
   </div>
-</div>

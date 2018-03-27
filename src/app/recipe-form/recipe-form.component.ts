@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeFormComponent implements OnInit {
 
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
   constructor() { }
 
   ngOnInit() {
   }
-
 }
