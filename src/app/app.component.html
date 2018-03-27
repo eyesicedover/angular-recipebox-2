@@ -7,5 +7,12 @@
   </div>
 </div>
   <div class="container">
-    <app-recipe-list [childRecipesList]="masterRecipesList"></app-recipe-list>
+    <div class="row">
+      <div class="col-sm-8">
+        <app-recipe-list [childRecipesList]="masterRecipesList" (clickSender)="editRecipe($event)"></app-recipe-list>
+      </div>
+      <div class="col-sm-4">
+        <app-edit-recipe></app-edit-recipe>
+      </div>
+    </div>
   </div>

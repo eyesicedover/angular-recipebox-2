@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Recipe } from '../models/recipe.model';
 
 @Component({
@@ -8,8 +8,13 @@ import { Recipe } from '../models/recipe.model';
 })
 export class RecipeListComponent {
   @Input() childRecipesList: Recipe[];
+  @Output() clickSender = new EventEmitter();
   show: number;
   myVar = false;
+
+  editButtonClicked(recipeToEdit: Recipe) {
+    this.clickSender.emit(recipeToEdit);
+  }
 
   toggleShow(i) {
     //click on new recipe
@@ -25,6 +30,4 @@ export class RecipeListComponent {
       }
     }
   }
-
-
 }
