@@ -1,18 +1,18 @@
-<div class="card">
+<div class="card card-body">
   <h3>New Recipe</h3>
   <hr>
   <label>Recipe Name</label>
-  <input #newName>
+  <input #newName required>
   <label>Instructions</label>
-  <input #newInstruct>
+  <textarea rows="7" #newInstruct required></textarea>
   <label>Description</label>
-  <input #newDesc>
+  <textarea rows="4" #newDesc required></textarea>
   <label>Ingredients</label>
-  <input #newIngredients>
+  <textarea rows="3" #newIngredients required></textarea>
   <label>Tags</label>
-  <input #newTags>
+  <textarea rows="2" #newTags required></textarea>
   <label>Image</label>
-  <input #newImage>
+  <input #newImage required>
   <hr>
   <button (click)="submitForm(newName.value, newInstruct.value, newDesc.value, newIngredients.value, newTags.value, newImage.value); newName.value=''; newInstruct.value=''; newDesc.value=''; newIngredients.value=''; newTags.value=''; newImage.value='';">Add</button>
 </div>

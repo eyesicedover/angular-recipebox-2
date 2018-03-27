@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+ color: #3B3923;
+ background-color: #5C1C31;
+}
+
+.jumbotron {
+  background-color: #B3959F;
+}
+
+.card {
+  background-color: #DED1D6;
+}
