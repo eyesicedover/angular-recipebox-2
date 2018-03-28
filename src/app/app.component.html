@@ -12,7 +12,7 @@
         <app-recipe-list [childRecipesList]="masterRecipesList" (clickSender)="editRecipe($event)"></app-recipe-list>
       </div>
       <div class="col-sm-4">
-        <app-edit-recipe [childSelectedRecipe]="selectedRecipe" (clickedDone)="finishedEditing()"></app-edit-recipe>
+        <app-edit-recipe [childSelectedRecipe]="selectedRecipe" (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
         <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
       </div>
     </div>

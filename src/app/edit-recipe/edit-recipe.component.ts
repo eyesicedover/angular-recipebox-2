@@ -9,8 +9,13 @@ import { Recipe } from '../models/recipe.model';
 export class EditRecipeComponent{
   @Input() childSelectedRecipe: Recipe;
   @Output() clickedDone = new EventEmitter();
+  @Output() clickedDelete = new EventEmitter();
 
   doneEditing() {
     this.clickedDone.emit();
+  }
+
+  deleteRecipe() {
+    this.clickedDelete.emit();
   }
 }

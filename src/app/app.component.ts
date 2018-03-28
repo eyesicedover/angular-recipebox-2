@@ -27,4 +27,10 @@ export class AppComponent {
   addRecipe(newRecipe: Recipe) {
     this.masterRecipesList.push(newRecipe);
   }
+
+  deleteRecipe() {
+    let index = this.masterRecipesList.indexOf(this.selectedRecipe);
+    this.masterRecipesList.splice(index, 1);
+    this.selectedRecipe = null;
+  }
 }

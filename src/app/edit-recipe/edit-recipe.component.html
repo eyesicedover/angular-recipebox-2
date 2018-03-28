@@ -14,5 +14,7 @@
   <label for="image">Image</label>
   <input type="text" [(ngModel)]="childSelectedRecipe.image" required>
   <hr>
-  <button type="submit" (click)="doneEditing()">Done</button>
+  <button class="btn btn-primary" type="submit" (click)="doneEditing()">Done</button>
+  <hr>
+  <button (click)="deleteRecipe()" class="btn btn-danger">Delete</button>
 </div>
